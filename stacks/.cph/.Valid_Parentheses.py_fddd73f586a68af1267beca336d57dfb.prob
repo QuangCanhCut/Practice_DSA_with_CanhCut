@@ -1,0 +1,1 @@
+{"name":"Local: Valid_Parentheses","url":"g:\\DSA_Daily\\stacks\\Valid_Parentheses.py","tests":[{"id":1791647227211,"input":"(]","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"g:\\DSA_Daily\\stacks\\Valid_Parentheses.py","group":"local","local":true}
