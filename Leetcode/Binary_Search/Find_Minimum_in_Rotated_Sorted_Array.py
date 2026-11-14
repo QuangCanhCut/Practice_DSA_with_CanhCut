@@ -8,7 +8,7 @@ def find_min(nums):
         if nums[mid] > nums[r]:
             l = mid + 1
         else:
-            r = mid - 1
+            r = mid
 
     return nums[l]
 
