@@ -1,13 +1,22 @@
 heights = list(map(int, input().split()))
 
+n = len(heights)
 max_area = 0
 stack = []
 
-for i in range(len(heights)):
-    while stack and heights[stack[-1]] > heights[i]:
-        h = heights[stack.pop()]
-        w = i if not stack else i - stack[-1] - 1
-        max_area = max(max_area, h * w)
-    stack.append(i)
+for i, height in enumerate(heights):
+    start = i
+    while stack and height < stack[-1][0]:
+        h, j = stack.pop()
+        w = i - j
+        a = h * w
+        max_area = max(max_area, a)
+        start = j
+    stack.append((height, start))
+
+while stack:
+    h, j = stack.pop()
+    w = n - j
+    max_area = max(max_area, h * w)
 
 print(max_area)
